@@ -24,7 +24,7 @@ const initializeApp = async (): Promise<DispatcherSession> => {
           // To call the feature we call a POST method on the right URL
           // and pass it a serialized GatewayRequest as define in the SDK
           const response = await axios.post(
-            "http://localhost:5298/api/service-to-module/" + ctx.featureId,
+            "https://uniscale-demo-account.azurewebsites.net/api/service-to-module/" + ctx.featureId,
             GatewayRequest.from(input, ctx),
             { headers }
           )
@@ -37,7 +37,7 @@ const initializeApp = async (): Promise<DispatcherSession> => {
           // To call the feature we call a POST method on the right URL
           // and pass it a serialized GatewayRequest as define in the SDK
           const response = await axios.post(
-            "http://localhost:5192/api/service-to-module/" + ctx.featureId,
+            "https://uniscale-demo-messages.azurewebsites.net/api/service-to-module/" + ctx.featureId,
             GatewayRequest.from(input, ctx),
             { headers }
           )
